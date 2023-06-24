@@ -15,6 +15,9 @@ It has several potential applications, including early detection of mental healt
         <b>**User Login**<b>
 ![image](https://github.com/dhana1612/Prediction-of-User-Behavior-in-Social-Networks/assets/113229705/16d0d917-c318-433f-a2f4-1a044025bea4)
 
+
+<b>User Registration</b>
+         ![image](https://github.com/dhana1612/Prediction-of-User-Behavior-in-Social-Networks/assets/113229705/f58df70d-b5b9-44df-817d-439467370e01)
         
 
 **SQUAD**:
