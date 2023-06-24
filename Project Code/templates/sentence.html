@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://img.freepik.com/free-psd/3d-quote-box-with-ladder-icon-isolated-3d-render-illustration_47987-9850.jpg?w=740&t=st=1684034061~exp=1684034661~hmac=f26c1ba476d3b7ae5e6a4452e495e24364dadbfe80a23b65983830e3152894f2"); 
+            background-color: #f1f1f1;
+            margin: 0;
+            background-repeat: no-repeat; 
+            background-size: 100% 220%;
+            
+        }
+
+        .header {
+            background-color: #ECF0F1;
+            color: #fff;
+            display: flex;
+            justify-content: space-between; /* Align items with space between */
+            align-items: center;
+            padding: 2px 20px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-family: Segoe Print;
+            margin: 0;
+            font-size: 30px;
+            text-align: center;
+            flex-grow: 1; /* Allow the header to grow and center the h1 */
+        }
+
+        .container {
+            position: relative;
+            left: -20px;
+            bottom: -110px;
+            width: 35%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 10px;
+            box-shadow: 0px 0px 15px #ccc;
+            border-radius: 10px;
+            background-color:#D8C6F8  ;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 4px;
+            background-color: #F4ECF7 ;
+            resize: none;
+            height: 50px;
+            font-size: 16px;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0px 0px 10px #333;
+        }
+        
+        .header a {
+            font-size: 30px;
+            font-family: Ink Free, CURSIVE;
+            text-align: right; /* Align the text to the right */
+            margin-left: auto; /* Add auto margin to push it to the right */
+            text-decoration: none; /* Remove the underline */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sentence Analysis</h1>
+        <a href="/Frontpage" >Home</a>
+    </div>
+    <div class="container">
+        <form action="/pre" method="POST" autocomplete="off">
+            <label for="text">Enter a sentence:</label>
+            <br>
+            <input type="text" id="text" name="text">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

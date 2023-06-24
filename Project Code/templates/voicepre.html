@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<style>
+		body {
+	background-color: #F5F5F5;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333333;
+}
+
+.result-box {
+	background-image: url('https://www.example.com/background-image.jpg');
+	background-repeat: repeat;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	text-align: center;
+	margin: 50px auto;
+	max-width: 600px;
+}
+
+h1 {
+	color: #006666;
+	font-size: 48px;
+	font-weight: 700;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+p {
+	font-size: 24px;
+	color: #4d4d4d;
+	margin: 20px 0 0;
+}
+
+.result-box:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+	
+</style>
+</head>
+<body>
+	<div class="result-box">
+		<h1>Result:</h1>
+		<p>{{ output }}</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload a Document</title>
+	<!-- Include Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+			background:url('https://wallpaperaccess.com/full/3457485.jpg');
+		background-repeat: no-repeat;
+			background-size: cover;
+			animation: load transition 2s;
+			font-family: Arial, sans-serif;
+			background-color: #f1f1f1;
+			margin: 0;
+			padding: 0;
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #D4E6F1 ;
+			padding: 2px 30px;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		.header h1 {
+			margin: 0;
+			font-size: 35px;
+			font-family:Segoe Print	;
+			padding: 3px;
+			text-align: center;
+			color: #000;
+			font-weight: bold;
+			
+		}
+		.header a {
+			color: #000;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+		.header a:hover {
+			color: #5bc0de;
+		}
+		form {
+			width: 45%;
+			margin: auto;
+			margin-top: 80px;
+			padding: 30px;
+	
+background: rgba(169, 204, 227, 0.61);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.2px);
+-webkit-backdrop-filter: blur(7.2px);
+border: 1px solid rgba(169, 204, 227, 0.75);
+		}
+		
+		
+		
+		textarea {
+			width: 100%;
+			height: 100px;
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			border: none;
+			font-size: 20px;
+			color: #333;
+			background-color: #f9f9f9;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		}
+		button {
+			background-color: #34495E;
+			color: #fff;
+			padding: 8px 10px;
+			border: none;
+			border-radius: 12px;
+			cursor: pointer;
+			font-size: 20px;
+			transition: background-color 0.3s ease;
+		}
+		button:hover {
+			background-color: #EC7063;
+		}
+		::placeholder {
+			color: #999;
+		}
+		h2{
+	font-size: 30px;
+		font-family: Ink Free,CURSIVE;
+		}
+		
+		a{
+			font-size: 30px;
+		font-family: Ink Free,CURSIVE;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Document Analysis</h1>
+		<a href="/Frontpage">Home</a>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 mt-5">
+				<form action="/analyze" method="post" enctype="multipart/form-data">
+				
+						<h2> <b>Choose a File: </b></h2>
+					
+				
+					<div class="form-group">
+					
+					
+						
+						<div class="custom-file">
+						
+							<input type="file" class="custom-file-input" id="file" name="file">
+							
+					
+							<label class="custom-file-label" for="file"> <span id ="file-name"></span></label>
+						</div>
+						
+					</div>
+					<button type="submit">Analyse</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Include Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script>
+		document.querySelector('#file').addEventListener('change', function(){
+			document.querySelector('#file-name').textContent = this.files[0].name;
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis</title>
+	<style>
+		body {
+			background-image: url("https://www.kapiche.com/blog/content/images/2021/08/AdobeStock_249557079.jpeg"); 
+            background-color: #f1f1f1;
+            margin: 0;
+            background-repeat: no-repeat; 
+            background-size: 100% 200%;
+			
+		}
+
+		.header {
+			background-color:#34495E ;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 4px 20px;
+			margin-bottom: 30px;
+		}
+
+		.header a {
+			color: #fff;
+			font-size: 30px;
+            font-family: Ink Free, CURSIVE;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		.header h1 {
+			color: #fff;
+			font-size: 40px;
+            font-family: Segoe Print;
+			margin: 0;
+			font-size: 24px;
+			text-align: center;
+		}
+
+		.container {
+			max-width: 550px;
+			margin: auto;
+			padding: 15px;
+			box-shadow: 0px 0px 15px #ccc;
+			border-radius: 8px;
+			background-color: #fff;
+		}
+
+		h2 {
+			color: #333;
+			margin-top: 0;
+		}
+
+		label {
+			font-weight: bold;
+			color: #333;
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 4px;
+			background-color: #f1f1f1;
+			resize: none;
+			height: 110px;
+			font-size: 16px;
+			box-shadow: 0px 0px 5px #ccc;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: all 0.3s ease;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+			transform: translateY(-2px);
+			box-shadow: 0px 0px 10px #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1 style="margin: 0 auto;">Paragraph Analysis</h1>
+		<a href="/">Home</a>
+	</div>
+	<div class="container" style="margin-top: 50px;">
+		
+		<form action="/paragraph_sentiment" method="POST">
+			<label for="paragraph">Enter a paragraph:</label>
+			<textarea id="paragraph" name="paragraph"></textarea>
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

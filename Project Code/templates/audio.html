@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio Analysis</title>
+	<style>
+		body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://www.kapiche.com/blog/content/images/2021/08/AdobeStock_249557079.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+			 height: 83vh;
+         }
+		.container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			background-color: #f2f2f2;
+			box-shadow: 5px 5px 5px #888888;
+			margin: 50px auto;
+			max-width: 800px;
+			height: 300px;
+		}
+		.left-box {
+			flex: 1;
+			padding: 20px;
+		}
+		.right-box {
+			flex: 1;
+			padding: 20px;
+			background-color: #e6e6e6;
+			box-shadow: 5px 5px 5px #888888;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		input[type="file"] {
+			margin-bottom: 20px;
+		}
+		.button {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+			box-shadow: 2px 2px 2px #888888;
+			border-radius: 5px;
+			width: 100px;
+		}
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		.result {
+			height: 100%;
+			overflow-y: auto;
+			font-size: 20px;
+			font-weight: bold;
+			color: #333333;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.back-button {
+			position: fixed;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Audio Analysis</h1>
+		<a href="/">Home</a>
+	</header>
+	<div class="container">
+		<div class="left-box">
+			<h2>Upload Audio File</h2>
+			<div class="form-container">
+				<form action="/audio" method="post" enctype="multipart/form-data">
+					<input type="file" name="file" accept=".wav"><br><br>
+					<input type="submit" class="button" value="Submit">
+				</form>
+			</div>
+		</div>
+		<div class="right-box">
+			<h2>Prediction Result</h2>
+			<div class="result">
+				{% if text %}
+					<p>{{ text }}</p>
+					<p>{{ sentiment }}</p>
+				{% else %}
+					<p>No prediction result available.</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<a href="/" class="button>back</a>
+
+</body>
+</html>

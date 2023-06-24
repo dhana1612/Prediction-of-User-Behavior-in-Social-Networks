@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Voice Input</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://www.kapiche.com/blog/content/images/2021/08/AdobeStock_249557079.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+			 height: 83vh;
+         }
+         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+         }
+         header h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: #333333;
+         }
+         header a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+         }
+         header a:hover {
+            color: #555555;
+         }
+         form {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         }
+         label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+         }
+         input[type="text"] {
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #333333;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+         }
+         button[type="button"],
+         button[type="submit"] {
+            display: inline-block;
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+         }
+         button[type="button"]:hover,
+         button[type="submit"]:hover {
+            background-color: #555555;
+         }
+         @media (max-width: 768px) {
+            form {
+               padding: 20px;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h2>Voice Input</h2>
+         <a href="/">Home</a>
+      </header>
+      <form method="POST" action="/voicepre">
+         <label for="voice_input">Speak Here:</label>
+         <input type="text" name="text" id="voice_input" readonly>
+         <button type="button" onclick="startRecording()">Start Recording</button>
+         <button type="button" onclick="stopRecording()">Stop Recording</button>
+         <button type="submit">Predict</button>
+      </form>
+      <script>
+         var recognition = new webkitSpeechRecognition();
+         recognition.continuous = true;
+         recognition.interimResults = true;
+         
+         function startRecording() {
+            recognition.start();
+         }
+         
+         function stopRecording() {
+            recognition.stop();
+         }
+         recognition.onresult = function(event) {
+            var interim_transcript = '';
+            for (var i = event.resultIndex; i < event.results.length; ++i) {
+               if (event.results[i].isFinal) {
+                  document.getElementById("voice_input").value = event.results[i][0].transcript;
+               } else {
+                  interim_transcript += event.results[i][0].transcript;
+               }
+            }
+         }
+
+      </script>
+   </body>
+</html>

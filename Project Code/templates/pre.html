@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+    h1 {
+        color: #0099ff;
+        text-align: center;
+    }
+    
+    p {
+        color: #555;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    /* Add 3D box effect */
+    .box {
+        width: 700px;
+        height: 150px;
+        margin: 80px auto;
+        background: #fff;
+        box-shadow:
+          0 5px 15px rgba(0,0,0,0.3),
+          0 0 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .box:before {
+        content: "";
+        position: absolute;
+        top: -2px; bottom: -2px; left: -2px; right: -2px;
+        background: rgba(0,0,0,0.1);
+        z-index: -1;
+        border-radius: 12px;
+    }
+    
+    /* Adjust styles for mobile screens */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 28px;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        .box {
+            width: 250px;
+            height: 150px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <h1>Result Page</h1>
+        <p>{{output}}</p>
+    </div>
+</body>
+</html>

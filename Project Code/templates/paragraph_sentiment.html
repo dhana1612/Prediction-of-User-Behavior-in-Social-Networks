@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paragraph Sentiment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+	body{
+			background-image: url("https://www.kapiche.com/blog/content/images/2021/08/AdobeStock_249557079.jpeg"); 
+            background-color: #f1f1f1;
+            margin: 0;
+            background-repeat: no-repeat; 
+            background-size: 100% 220%;
+	
+	}
+	
+      .card {
+        border: none;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        transform-style: preserve-3d;
+        perspective: 3000px;
+	
+      }
+
+      .card-body {
+        transform: translateZ(40px);
+      }
+	  
+	  .card-text {
+				text-align: justify;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="mb-4">Paragraph Sentiment</h1>
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <h5 class="card-title"><strong>Paragraph:</strong></h5>
+              <p class="card-text">{{ paragraph }}</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="card-title"><strong>Translated Paragraph:</strong></h5>
+              <p class="card-text">{{ translated_paragraph }}</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="card-title"><strong>Sentiment:</strong></h5>
+              <p class="card-text">{{ label }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/" class="btn btn-primary">Back</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

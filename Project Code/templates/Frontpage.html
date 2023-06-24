@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User behaviour analysis in social media</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Frontpage.css') }}">
+   
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <div class="header" id="home">
+        <nav id="navbar">
+        
+            <div class="links" id="nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#service">Predictions</a>
+               
+                <a href="#contact">Contact</a>
+
+
+            </div>
+            <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+            <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+        </nav>
+		<form action="/doc" method="post" enctype="multipart/form-data">
+        <div class="content">
+            <h3>Predict the future of social media with us!</h3>
+            <h1>Prediction of user Behaviour<br> in Social Network</h1>
+            <button class="btn">Get started</button>
+        </div>
+		</form>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="image">
+
+            </div>
+            <div class="about-content">
+                <h1>"Transforming User Behavior Data into Actionable Insights"</h1>
+                
+                <p>We are a team of passionate students  committed to using technology to address real-world challenges.  By analyzing social media data and applying advanced algorithms, we can provide valuable insights into user behavior patterns. We believe that our project can help businesses and marketers develop more effective marketing strategies, engage with their audiences more meaningfully, and ultimately increase their bottom line.</p>
+                  
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- About Section End-->
+
+    
+    <!-- Service Section -->
+    <section class="service" id="service">
+        <h1 class="heading">Our <span>Predictions</span></h1>
+        <p class="heading-description"><b>"Predict, engage, succeed – with our data-driven social media insights"</b></p>
+        <div class="container">
+		
+  <a href="home">
+  <div class="service-box">
+    <div class="service-img">
+      <img src="https://thumbs.dreamstime.com/b/document-analysis-21977567.jpg" alt="">
+    </div>
+    <div class="service-content">
+      <h3>Document analysis</h3>
+      <p style="color:purple">Turn data overload into actionable insights with document analysis</p>
+    </div>
+  </div>
+</a>
+
+
+<a href="sen">
+ <div class="service-box">
+                <div class="service-img">
+                    <img src="https://cdn.artisticenglish.com/Master-Structure-Analysis-of-Sentences.jpg.webp" alt="">
+                </div>
+				
+				
+                <div class="service-content">
+                    <h3>sentence</h3>
+                    <p>Discover the true intentions behind your users' words with sentence analysis."</p>
+                </div>
+            </div>
+			</a>
+			
+			
+			
+			
+			<a href="para">
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="https://media.istockphoto.com/id/1341785038/photo/business-graphs-charts-and-magnifying-glass-on-table-financial-development-banking-account.jpg?b=1&s=170667a&w=0&k=20&c=fGJVBwAibMgB26hHTU-w1Dxl4BPYmhySO9Q1m0OggOg=" alt="">
+                </div>
+				
+				
+                <div class="service-content">
+                    <h3>paragraph analysis</h3>
+                    <p>Discover the true intentions behind your users' words with sentence analysis."</p>
+                </div>
+            </div>
+			</a>
+		
+			
+			
+			
+			
+			<a href="audio">
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSQRklIMYet2pcJh8Roo9nIk38jmZ3Xy_Q0Ba19TmcnUDh35MZCTdUCqWhiOir50lFByD3rCtqVYzc_MSeULiKXwiACoigiw5hIzoRzKXN5x--SYNx4TcJvD4PXLwX19fVWwwFfdQvqsmcxYzboJUkX5wuCVyULRdJwJbdgaM_jv2niDAxxTM9GbdCwA/s379/vitxt9.png" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>Audio analysis</h3>
+                    <p style="color:green">Get more out of your audio content with text transcriptions for improved analysis and insights</p>
+                </div>
+            </div>
+			</a>
+			
+			
+			
+			<a href="voice">
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="https://us.123rf.com/450wm/artemisdian/artemisdian2112/artemisdian211200131/179750275-natural-language-processing-nlp-speech-recognition-computational-linguistics-concept-with.jpg?ver=6" alt="">
+                </div>
+                <div class="service-content">
+                    <h3>voice analysis</h3>
+                    <p style="color:blue"> Get real-time insights into customer sentiment and behavior with our voice analysis technology. </p>
+                </div>
+            </div>  
+        </div>
+		</a>
+		
+    </section>
+    <!-- Service Section End -->
+
+
+
+    
+                
+
+
+    <!-- Contact Section  -->
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Us</span></h1>
+        <p class="heading-description">We are always here for you...</p>
+        <div class="container">
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>Email address <br> <span>Send email anytime</span></h2>
+                </div>
+                <div>
+                    <p>admin@domain.com</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>+
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>Address <br> <span>Find Us</span></h2>
+                </div>
+                <div>
+                    <p>TamilNadu , India</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>Call Us <br> <span>Call us anytime</span></h2>
+                </div>
+                <div>
+                    <p>+1234567890</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section End -->
+
+
+
+
+    <!-- Footer Section -->
+    <section class="footer">
+
+
+        <div class="container">
+            <div class="footer-box">
+                <h3>about us </h3>
+                <p>By Analyzing Social Media Data And Applying Advanced Algorithms, We Can Provide Valuable Insights Into User Behavior Patterns. We Believe That Our Project Can Help Businesses And Marketers Develop More Effective Marketing Strategies, Engage With Their Audiences More Meaningfully, And Ultimately Increase Their Bottom Line.</p>
+                
+                        </a></p>
+
+            </div>
+            <div class="footer-box">
+                <h3>Newsletter</h3>
+                <p>Stay update with our latests  </p>
+                <form>
+                    <input type="email" name="email" placeholder="admin@gmail.com">
+                    <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+                </form>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <p>Connect With Us On:</p>
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <script src="script.js">
+	let menu = document.getElementById("nav");
+let open = document.getElementById("menu-btn");
+let close = document.getElementById("close");
+
+function openmenu() {
+  menu.style.left = "0";
+  open.style.display = "none";
+  close.style.display = "block";
+}
+function closemenu() {
+  menu.style.left = "-100%";
+  open.style.display = "block";
+  close.style.display = "none";
+}
+
+// nav bg color change
+
+function change() {
+  var nav = document.getElementById("navbar");
+  var value = window.scrollY;
+  if (value > 80) {
+    nav.classList.add("nav-change");
+  } else {
+    nav.classList.remove("nav-change");
+  }
+}
+
+window.addEventListener("scroll", change);
+	
+	
+	
+	</script>
+</body>
+
+</html>
