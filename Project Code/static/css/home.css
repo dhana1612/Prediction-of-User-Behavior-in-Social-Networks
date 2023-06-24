@@ -1,0 +1,11 @@
+body {
+			background:url('https://img.freepik.com/free-vector/social-media-icons_53876-89122.jpg?w=740&t=st=1678642014~exp=1678642614~hmac=6e2a9df367c13fca384997fe5e749b6328986b6427a86734e4d8fe22dfe74e5b');
+			background-repeat: no-repeat;
+			background-size: cover;
+			animation: load transition 2s;
+			font-family: Arial, sans-serif;
+			background-color: #f1f1f1;
+			margin: 0;
+			padding: 0;
+		}
+		

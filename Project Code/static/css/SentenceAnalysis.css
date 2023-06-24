@@ -1,0 +1,90 @@
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+	 
+	 .hero-text h2 
+	 {
+		display: inline-block;
+     }
+      .hero-text h2 {
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-family: Mv Boli;
+      }
+
+      body {
+        background-image: url("https://img.freepik.com/premium-vector/email-marketing-data-analysis-work-from-home-illustration_677179-95.jpg?w=740");
+        background-size: 1500px 700px;
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+      }
+
+      nav a:hover {
+        background-color: white;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: lightgreen;
+        color: #333;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
