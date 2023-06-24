@@ -9,6 +9,7 @@ These models will be trained to recognize different sentiment categories, such a
 It has several potential applications, including early detection of mental health issues, personalized treatment, online safety, and improved policing strategies.
 <br>
 **Architecture Diagram**
+
 ![image](https://github.com/dhana1612/Prediction-of-User-Behavior-in-Social-Networks/assets/113229705/33fb39d9-121c-4975-8f2b-5e151fd5155f)
 
 <h3>Screen Shots</h3>
