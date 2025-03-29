@@ -2,9 +2,7 @@
 import sys
 sys.path.append('/vercel/path0/Project Code')
 
-
-from flask import Flask, render_template, request,jsonify,flash,redirect,url_for,session
-import sqlite3
+from flask import Flask, render_template, request, jsonify, flash, redirect, url_for, session
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import regex as re
 from collections import Counter
@@ -18,32 +16,20 @@ import time
 import pandas as pd
 import numpy as np
 import os
-import re
 import neattext.functions as nfx
-import pandas as pd
-import nltk
-from nltk import pos_tag
-from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 import contractions
-import speech_recognition as sr
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.models import load_model
 from transformers import pipeline
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import LinearSVC
 from googletrans import Translator
 import string
 from nltk.corpus import stopwords
-from transformers import RobertaTokenizerFast, TFRobertaForSequenceClassification, pipeline
+from transformers import RobertaTokenizerFast, TFRobertaForSequenceClassification
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-from pydub import AudioSegment
-from pydub.silence import split_on_silence
 import logging
 logging.getLogger('transformers').setLevel(logging.ERROR)
+
 
 
 
@@ -51,9 +37,12 @@ app = Flask(__name__)
 app.secret_key="123"
 
 
-con=sqlite3.connect("database.db")
-con.execute("create table if not exists customer(pid integer primary key,name text,address text,Email integer,Password text)")
-con.close()
+# Dummy user data - replace with your actual user management system
+USERS = {
+    "admin": {"password": "admin123", "email": "admin@example.com", "address": "123 Main St"},
+    "user1": {"password": "password1", "email": "user1@example.com", "address": "456 Oak Ave"}
+}
+
 
 # Extract the Date time
 def date_time(s):
@@ -198,64 +187,57 @@ def get_large_audio_transcription(path):
 def index():
     return render_template('index.html')
 
-@app.route('/login',methods=["GET","POST"])
+@app.route('/login', methods=["GET", "POST"])
 def login():
-    if request.method=='POST':
-        name=request.form['name']
-        password=request.form['password']
-        con=sqlite3.connect("database.db")
-        con.row_factory=sqlite3.Row
-        cur=con.cursor()
-        cur.execute("select * from customer where name=? and Password=?",(name,password))
-        data=cur.fetchone()
-
-        if data:
-            session["name"]=data["name"]
-            session["Password"]=data["Password"]
-            return redirect("Frontpage")
+    if request.method == 'POST':
+        username = request.form['name']
+        password = request.form['password']
+        
+        if username in USERS and USERS[username]['password'] == password:
+            session["username"] = username
+            session["email"] = USERS[username]['email']
+            return redirect(url_for('home'))
         else:
-            flash("Username and Password Mismatch","danger")
-    return redirect(url_for("index"))
+            flash("Username and Password Mismatch", "danger")
+    return redirect(url_for('index'))
 
-
-
-@app.route('/register',methods=['GET','POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    if request.method=='POST':
-        try:
-            name=request.form['name']
-            address=request.form['address']
-            Email=request.form['Email']
-            Password=request.form['Password']
-            con=sqlite3.connect("database.db")
-            cur=con.cursor()
-            cur.execute("insert into customer(name,address,Email,Password)values(?,?,?,?)",(name,address,Email,Password))
-            con.commit()
-            flash("Record Added  Successfully","success")
-        except:
-            flash("Error in Insert Operation","danger")
-        finally:
-            return redirect(url_for("index"))
-            con.close()
-
+    if request.method == 'POST':
+        username = request.form['name']
+        if username in USERS:
+            flash("Username already exists", "danger")
+            return redirect(url_for('register'))
+        
+        USERS[username] = {
+            "password": request.form['Password'],
+            "email": request.form['Email'],
+            "address": request.form['address']
+        }
+        flash("Registration Successful", "success")
+        return redirect(url_for('index'))
+    
     return render_template('register.html')
 
-
-
-
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))
 
 @app.route('/Frontpage')
 def home():
+    if 'username' not in session:
+        return redirect(url_for('index'))
     return render_template('Frontpage.html')
 
-@app.route('/doc', methods=['POST','GET'])
+@app.route('/doc', methods=['POST', 'GET'])
 def ind():
     return render_template('home.html')
 
-@app.route('/home', methods=['POST','GET'])
+@app.route('/home', methods=['POST', 'GET'])
 def document():
     return render_template('home.html')
- 
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     # Get the uploaded file from the form
