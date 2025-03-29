@@ -13,7 +13,7 @@ python-dotenv==1.0.0
 # Sentiment Analysis Models
 vaderSentiment==3.3.2
 transformers==4.33.3
-tensorflow==2.13.0  # or tensorflow-cpu if no GPU
+tensorflow==2.19.0  # or tensorflow-cpu if no GPU
 keras==2.13.1
 
 # Machine Learning
