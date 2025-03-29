@@ -41,7 +41,6 @@ tqdm==4.66.1
 
 # Development
 gunicorn==21.2.0  # For production deployment
-Flask-Cors==4# Production
 gevent==22.10.2
 psutil==5.9.5.0.0
 
