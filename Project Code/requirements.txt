@@ -1,36 +1,11 @@
-# Core Requirements
 Flask==3.0.2
-Werkzeug==3.0.1
-
-# Text Processing & NLP
-nltk==3.8.1
-neattext==0.1.3
+vaderSentiment==3.3.2
 regex==2023.12.25
 emoji==2.8.0
-contractions==0.1.73
-python-dotenv==1.0.0
-
-# Sentiment Analysis (Lightweight Alternatives)
-vaderSentiment==3.3.2
-transformers==4.36.2
-torch==2.2.1  # Smaller than TensorFlow
-sentence-transformers==2.2.2
-
-# Machine Learning (Minimal Set)
-scikit-learn==1.3.2
 pandas==2.1.4
 numpy==1.26.4
-
-# Audio Processing (Optional - Remove if not essential)
-# SpeechRecognition==3.10.0
-# pydub==0.25.1
-
-# Visualization (Remove for serverless)
-# matplotlib==3.8.2
-# seaborn==0.13.1
-
-# Utilities
+scikit-learn==1.3.2
+transformers==4.36.2
 googletrans==4.0.0-rc1
-python-dateutil==2.8.2
-Pillow==10.1.0
-tqdm==4.66.1
+nltk==3.8.1
+neattext==0.1.3
