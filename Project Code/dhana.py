@@ -1,3 +1,8 @@
+# In your app.py, add this at the top:
+import sys
+sys.path.append('/vercel/path0/Project Code')
+
+
 from flask import Flask, render_template, request,jsonify,flash,redirect,url_for,session
 import sqlite3
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
