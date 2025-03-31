@@ -82,7 +82,7 @@ textsearch==0.0.24
 tf_keras==2.19.0
 threadpoolctl==3.6.0
 tokenizers==0.21.1
-torch==2.6.0
+torch==2.1.0
 tqdm==4.67.1
 typing_extensions==4.13.0
 tzdata==2025.2
