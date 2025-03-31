@@ -1,51 +1,44 @@
 body {
-            font-family: Arial, sans-serif;
-            background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bG9naW58ZW58MHx8MHx8&w=1000&q=80"); 
-            background-color: #f1f1f1;
-            margin: 0;
-            background-repeat: no-repeat; 
-            background-size: 100% 130%;   
-        }
-		
-		
-		.container
-		{
-			position: relative;
-			left: 15px;
-			bottom: 20px;
-		}
-		
-
-    .shadow{
-        padding: 25px;
-		background: rgba( 255, 255, 255, 0.5 );
-		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-		backdrop-filter: blur( 9.5px );
-		-webkit-backdrop-filter: blur( 9.5px );
-		border-radius: 10px;
-		border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bG9naW58ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 60px;
+}
+header {
+    background-color: #2E4053;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.btn-space {
+    margin-top: 20px;
+    
+}
+@media (max-width: 576px) {
+    .login-box {
+        padding: 20px;
     }
-
-    .header {
-        text-align: center;
-        margin-bottom: 20px;
+    header h1 {
+        font-size: 1.2rem;
     }
-
-    /* New styles for the header */
-    header {
-        background-color: #2E4053 ;
-        color: #fff ;
-        padding: 4px;
-    }
-
-    h1 {
-        margin: 0;
-		font-size: 35px;
-		font-family: Comic Sans MS,CURSIVE;
-		padding: 3px;
-		text-align: center;
-    }
-h2{
-	font-size: 35px;
-		font-family: Comic Sans MS,CURSIVE;
-		}
+}
