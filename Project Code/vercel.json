@@ -1,18 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "dhana.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
-    }
+    { "src": "Chandra.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dhana.py"
-    }
-  ]
+    { "src": "/(.*)", "dest": "Chandra.py"}
+]
 }
