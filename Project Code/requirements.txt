@@ -76,7 +76,7 @@ SpeechRecognition==3.14.2
 sympy==1.13.1
 tensorboard==2.19.0
 tensorboard-data-server==0.7.2
-tensorflow==2.19.0
+tensorflow==2.12.0
 termcolor==3.0.0
 textsearch==0.0.24
 tf_keras==2.19.0
