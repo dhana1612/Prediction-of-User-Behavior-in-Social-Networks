@@ -66,30 +66,52 @@
     </header>
 
     <h3>Content</h3>
-    <div class="box_wrapper">
-      <div id="messages" class="box">
-        <h4>{{ num_messages }}</h4>
-        <p>Messages</p>
-      </div>
-      <div id="media" class="box">
-        <h4>{{media_messages}}</h4>
-        <p>Media File</p>
-      </div>
-      <div id="emojis" class="box">
-        <h4>{{total_emojis}}</h4>
-        <p>Emojis</p>
-      </div>
-      <div id="links" class="box">
-        <h4>{{num_links}}</h4>
-        <p>Links</p>
-      </div>
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-12 col-sm-12 col-md-3 mb-4">
+            <div id="messages" class="box">
+                <h4>{{ num_messages }}</h4>
+                <p>Messages</p>
+            </div>
+        </div>
+    
+        <div class="col-12 col-sm-12 col-md-3 mb-4">
+            <div id="media" class="box">
+                <h4>{{ media_messages }}</h4>
+                <p>Media File</p>
+            </div>
+        </div>
+    
+        <div class="col-12 col-sm-12 col-md-3 mb-4">
+            <div id="emojis" class="box">
+                <h4>{{ total_emojis }}</h4>
+                <p>Emojis</p>
+            </div>
+        </div>
+    
+        <div class="col-12 col-sm-12 col-md-3 mb-4">
+            <div id="links" class="box">
+                <h4>{{ num_links }}</h4>
+                <p>Links</p>
+            </div>
+        </div>
+    
     </div>
+    
+    </div>
+    
+    
+    
+    
+    
+
 	
 	
 	
 	
 	
-	<h3>Media</h3>
+	<!-- <h3>Media</h3>
     <div class="box_wrapper">
       <div id="messages" class="box">
         <h4>{{  total_images }}</h4>
@@ -107,7 +129,7 @@
         <h4>{{num_links}}</h4>
         <p>Links</p>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -151,6 +173,7 @@
 	  
 	  
     </div>
+    
     <div class="box_wrapper">
         <h4>The Number of Messages Per Person</h4>
         <img src="{{ image_path }}" alt="Messages per person">
@@ -179,7 +202,7 @@
 	  
       <div id="top_ten_emojis" style="flex: 2" class="box">
         <p>Top 10 Emojis</p>
-         <img src="{{ image_path1 }}" alt="Messages per person">
+         <img src="{{image_path1}}" alt="Messages per person">
       </div>
     </div>
 	
@@ -221,7 +244,7 @@
       <div class="box">
         
         <p>
-		<img src="data:image/png;base64,{{ plot_data1 }}" alt="Bar chart of message counts by day of the week">
+		<img src="{{ image_file }}" alt="Bar chart of message counts by day of the week">
        </p>
       </div>
       <div class="box">
