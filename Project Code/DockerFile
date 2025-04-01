@@ -1,0 +1,26 @@
+# Use Python 3-slim as the base image
+FROM python:3.9-windowsservercore as builder
+
+# Expose port 5002 for the Flask app
+EXPOSE 5002
+
+# Prevent Python from generating .pyc files in the container
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Turn off buffering for easier container logging
+ENV PYTHONUNBUFFERED=1
+
+# Install pip requirements
+COPY requirements.txt . 
+RUN python -m pip install -r requirements.txt
+
+# Set the working directory in the container
+WORKDIR /app
+COPY . /app
+
+# Create a non-root user and grant permissions to the /app folder
+RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
+USER appuser
+
+# Command to run the Flask app using Gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:5002", "Chandra:app"]
