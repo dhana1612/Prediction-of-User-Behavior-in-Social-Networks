@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "Chandra.py", "use": "@vercel/python" }
+    { "src": "Chandra.py", "use": "@vercel/python", "memory": 2048  }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "Chandra.py"}
