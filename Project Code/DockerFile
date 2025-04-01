@@ -1,5 +1,5 @@
 # Use Python 3-slim as the base image
-FROM python:3-slim
+FROM python:3.9
 
 # Expose port 5002 for the Flask app
 EXPOSE 5002
@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
 COPY requirements.txt . 
-RUN python -m pip install -r requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt
 
 # Set the working directory in the container
 WORKDIR /app
