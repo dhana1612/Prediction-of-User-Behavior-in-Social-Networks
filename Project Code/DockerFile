@@ -1,5 +1,5 @@
 # Use Python 3-slim as the base image
-FROM python:3.9-windowsservercore as builder
+FROM python:3-slim
 
 # Expose port 5002 for the Flask app
 EXPOSE 5002
